@@ -63,11 +63,11 @@ openspec-viewer
 
 ### 元資料 — Frontmatter（選用，但建議）
 
-在每個 `proposal.md`（沒有就用 `design.md`）開頭加一段 YAML frontmatter，sidebar 就會顯示中文標題與日期：
+在每個 `proposal.md`（沒有就用 `design.md`）開頭加一段 YAML frontmatter，sidebar 就會顯示標題與日期：
 
 ```markdown
 ---
-title: 长文编辑器支持美股 / ETF
+title: My change title
 date: 2026-06-09
 status: in-progress   # 選填；通常自動推導比較準
 ---
