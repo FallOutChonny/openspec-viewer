@@ -1,0 +1,16 @@
+{
+  "name": "openspec-viewer",
+  "version": "0.1.0",
+  "description": "Local web viewer for OpenSpec change directories",
+  "bin": {
+    "openspec-viewer": "bin/openspec-viewer.js"
+  },
+  "main": "lib/server.js",
+  "scripts": {
+    "start": "node bin/openspec-viewer.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=14"
+  }
+}

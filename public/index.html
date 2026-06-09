@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenSpec Viewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" id="hljs-theme-dark" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css">
+  <link rel="stylesheet" id="hljs-theme-light" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css" disabled>
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.0/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <button id="sidebarShow" class="sidebar-show" title="Show sidebar (⌘B)" aria-label="Show sidebar">›</button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+  <div class="floating-actions" id="floatingActions">
+    <button id="lineToggle" class="icon-btn icon-btn-floating text-icon-btn" title="Show line links" aria-label="Show line links">Ln</button>
+    <button id="themeToggle" class="icon-btn icon-btn-floating" title="Toggle theme" aria-label="Toggle theme">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-row">
+        <div class="brand">📑 OpenSpec Viewer</div>
+        <button id="sidebarHide" class="icon-btn sidebar-hide-inline" title="Hide sidebar (⌘B)" aria-label="Hide sidebar">‹</button>
+      </div>
+      <div class="brand-tagline">瀏覽 openspec/ 目錄下的需求變更</div>
+    </div>
+    <div class="nav-section" id="changesSection">
+      <ul class="nav-list" id="changeList"></ul>
+    </div>
+    <div class="nav-section" id="specsSection" style="display: none;">
+      <div class="nav-title">Specs</div>
+      <ul class="nav-list" id="specList"></ul>
+    </div>
+  </aside>
+
+  <main class="content" id="content">
+    <div class="empty">
+      <h1>Pick a change from the left</h1>
+      <p class="hint">Or type something in the search bar to jump straight to a snippet.</p>
+    </div>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
