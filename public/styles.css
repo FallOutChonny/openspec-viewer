@@ -1179,7 +1179,7 @@ body.show-line-anchors .line-anchor {
   body > .content {
     max-width: 100vw;
     width: 100%;
-    padding: 56px 20px 120px;
+    padding: 56px 56px 120px;
   }
 
   /* Right-side floating cluster sits above the drawer when it's open. */
@@ -1187,5 +1187,12 @@ body.show-line-anchors .line-anchor {
     z-index: 246;
     right: 12px;
     top: 12px;
+  }
+}
+
+/* Phone-sized viewports: tighten padding further so content isn't dwarfed. */
+@media (max-width: 767px) {
+  body > .content {
+    padding: 56px 20px 120px;
   }
 }
